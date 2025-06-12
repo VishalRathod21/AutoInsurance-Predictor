@@ -1,0 +1,5 @@
+setup.py
+vehicle_insurance_prediction.egg-info/PKG-INFO
+vehicle_insurance_prediction.egg-info/SOURCES.txt
+vehicle_insurance_prediction.egg-info/dependency_links.txt
+vehicle_insurance_prediction.egg-info/top_level.txt
