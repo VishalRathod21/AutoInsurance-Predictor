@@ -141,10 +141,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Streamlit](https://streamlit.io/) - For the web interface
 - [Pandas](https://pandas.pydata.org/) - Data manipulation and analysis
 
-## 📧 Contact
-For any questions or feedback, please contact [Your Name] - [your.email@example.com]
-
----
 
 <div align="center">
   Made with ❤️ by [Your Name]
