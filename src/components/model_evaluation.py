@@ -44,7 +44,7 @@ class ModelEvaluation:
             proj1_estimator = Proj1Estimator(bucket_name=bucket_name,
                                                model_path=model_path)
 
-            if proj1_estimator.is_model_present(model_path=model_path):
+            if proj1_estimator.is_model_present():
                 return proj1_estimator
             return None
         except Exception as e:

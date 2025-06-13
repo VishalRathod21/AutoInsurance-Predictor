@@ -12,8 +12,8 @@ if not MONGODB_URL:
     raise ValueError("MONGODB_URL not found in .env file")
 
 # Database and collection names
-DATABASE_NAME = "Vehicle-Insurance"
-COLLECTION_NAME = "Vehicle-Insurance-Data"
+DATABASE_NAME = "vehicle_insurance"
+COLLECTION_NAME = "vehicle_insurance_data"
 
 def import_data():
     try:

@@ -1,8 +1,10 @@
 import logging
 import os
+import functools
 from logging.handlers import RotatingFileHandler
 from from_root import from_root
 from datetime import datetime
+from typing import Callable, Any
 
 # Constants for log configuration
 LOG_DIR = 'logs'
@@ -39,6 +41,34 @@ def configure_logger():
     # Add handlers to the logger
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
+
+def log_function_call(logger: logging.Logger = None):
+    """
+    A decorator that logs the function call details and execution time.
+    
+    Args:
+        logger: Logger instance to use. If None, creates a new logger.
+    """
+    def decorator(func: Callable) -> Callable:
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs) -> Any:
+            # Get logger if not provided
+            func_logger = logger or logging.getLogger(func.__module__)
+            
+            # Log function call
+            func_logger.debug(f"Calling {func.__name__} with args: {args}, kwargs: {kwargs}")
+            
+            try:
+                # Execute the function
+                result = func(*args, **kwargs)
+                func_logger.debug(f"Function {func.__name__} executed successfully")
+                return result
+            except Exception as e:
+                func_logger.error(f"Error in {func.__name__}: {str(e)}", exc_info=True)
+                raise
+                
+        return wrapper
+    return decorator
 
 # Configure the logger
 configure_logger()

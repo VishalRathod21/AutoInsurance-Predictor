@@ -57,11 +57,14 @@ class VehicleData:
         """
         This function returns a dictionary from VehicleData class input
         """
-        logging.info("Entered get_usvisa_data_as_dict method as VehicleData class")
+        logging.info("Entered get_vehicle_data_as_dict method as VehicleData class")
 
         try:
+            # Gender is already 1 for male, 0 for female from the form
+            gender_value = self.Gender if isinstance(self.Gender, int) else (1 if str(self.Gender).lower() == 'male' else 0)
+            
             input_data = {
-                "Gender": [self.Gender],
+                "Gender_1": [gender_value],
                 "Age": [self.Age],
                 "Driving_License": [self.Driving_License],
                 "Region_Code": [self.Region_Code],
@@ -71,7 +74,7 @@ class VehicleData:
                 "Vintage": [self.Vintage],
                 "Vehicle_Age_lt_1_Year": [self.Vehicle_Age_lt_1_Year],
                 "Vehicle_Age_gt_2_Years": [self.Vehicle_Age_gt_2_Years],
-                "Vehicle_Damage_Yes": [self.Vehicle_Damage_Yes]
+                "Vehicle_Damaged": [self.Vehicle_Damage_Yes]  # Changed from Vehicle_Damage_Yes to Vehicle_Damaged
             }
 
             logging.info("Created vehicle data dict")

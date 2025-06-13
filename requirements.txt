@@ -1,3 +1,4 @@
+streamlit>=1.30.0
 ipykernel>=6
 pandas>=1.5
 numpy>=1.21
