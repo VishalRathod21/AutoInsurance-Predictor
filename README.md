@@ -1,7 +1,7 @@
-# AutoInsure Predict
+# AutoInsurance Predictor
 
 ## 🚗 Project Overview
-AutoInsure Predict is an advanced machine learning solution designed to forecast customer interest in vehicle insurance policies. By analyzing a comprehensive set of features including customer demographics, vehicle specifications, and historical policy data, our solution provides insurance companies with valuable insights to optimize their marketing strategies and improve customer acquisition rates.
+AutoInsurance Predictor is an advanced machine learning solution designed to forecast customer interest in vehicle insurance policies. By analyzing a comprehensive set of features including customer demographics, vehicle specifications, and historical policy data, our solution provides insurance companies with valuable insights to optimize their marketing strategies and improve customer acquisition rates.
 
 ## 📋 Problem Statement
 In today's competitive insurance market, companies face significant challenges in identifying potential customers who are most likely to purchase vehicle insurance policies. Traditional marketing approaches often result in:
